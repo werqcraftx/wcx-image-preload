@@ -1,0 +1,55 @@
+{
+  "name": "wcx-image-preload",
+  "version": "1.0.0",
+  "description": "A WordPress plugin for preloading images to improve Google Lighthouse scores, such as video posters.",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:js:fix": "wp-scripts lint-js --fix",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js",
+    "prepare": "husky",
+    "phpcs": "vendor/bin/phpcs",
+    "phpcbf": "vendor/bin/phpcbf"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:js --"
+    ],
+    "*.php": [
+      "npm run phpcs --"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werqcraftx/wcx-image-preload.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/werqcraftx/wcx-image-preload/issues"
+  },
+  "homepage": "https://github.com/werqcraftx/wcx-image-preload#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@wordpress/scripts": "^31.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0"
+  }
+}
